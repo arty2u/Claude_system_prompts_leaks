@@ -24,4 +24,5 @@ const results = await pipeline(FILES,
     return { ...x, ok, reason }
   })),
 )
-return results.flat().filter(Boolean).filter(x => x.ok)
+const all = results.flat().filter(Boolean)
+return { fixed: all.filter(x => x.ok), unresolved: all.filter(x => !x.ok) }
