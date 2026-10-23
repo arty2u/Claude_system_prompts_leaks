@@ -1,0 +1,12 @@
+{
+  "model": "opus",
+  "ultracode": true,
+  "env": {
+    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet"
+  },
+  "permissions": {
+    "allow": ["Read", "Grep", "Glob", "Bash(git status*)", "Bash(git diff*)", "Bash(ls *)"],
+    "ask": ["Bash(git push*)"],
+    "deny": ["Bash(rm -rf *)"]
+  }
+}
